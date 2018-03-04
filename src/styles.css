@@ -1,1 +1,70 @@
-/* You can add global styles to this file, and also import other style files */
+.nav-item {
+  margin-right: 5px;
+}
+.nav-tabs .nav-link.active {
+  color: #fff;
+  background-color: #007bff;
+}
+.nav-pills .jga.nav-link,
+.nav-tabs .jga.nav-link {
+  background-color: #eee;
+}
+.nav-pills .jga.nav-link.active,
+.nav-tabs .jga.nav-link.active {
+  background-color: #007bff;
+  color: white;
+}
+.active textarea,
+.active input {
+  color: white;
+}
+.jga-background-transparent {
+  background: transparent;
+}
+.jga-border-none {
+  border: none;
+}
+.jga-padding-0px {
+  padding: 0px;
+}
+.jga-border-left-right-none {
+  border-left: none;
+  border-right: none;
+}
+.jga-border-bottom-none {
+  border-bottom: none;
+}
+.jga-text-align-center {
+  text-align: center;
+}
+.jga-font-size-1-point-5em {
+  font-size: 1.5em;
+}
+.jga-font-size-1-point-3em {
+  font-size: 1.3em;
+}
+.jga-position-relative-top-5px {
+  position: relative;
+  top: 5px;
+}
+.jga-padding-top-bottom-0px {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.jga-pull-bottom-right {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+}
+.jga-padding-12px {
+  padding: 12px;
+}
+.jga-color-red {
+  color: red;
+}
+
+.nav-link .form-control.form-control-sm {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
