@@ -1,0 +1,30 @@
+
+<ul [sortablejs]="sections"
+    [sortablejsOptions]="{ animation: 150 }"
+    class="nav nav-tabs jga-sortable-horizontal">
+  <li *ngFor="let section of sections"
+      ngInit="section.selected = false"
+      (click)="selectSection(section)"
+      class="nav-item"
+      title="Active pills can be removed and label can be edited">
+    <a class="jga nav-link"
+       [hidden]="!section.selected"
+       [ngClass]="{'active': section.selected}"
+       href="#">
+      <input class="jga-padding-0px jga-background-transparent jga-border-none"
+             [(ngModel)]="section.label"/>
+      &nbsp;
+      <i class="fa fa-times"></i>
+    </a>
+    <a class="jga nav-link"
+       [hidden]="section.selected"
+       href="#">
+      {{section.label}}
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">
+      <i class="jga-color-red jga-font-size-1-point-3em fa fa-plus-circle"></i>
+    </a>
+  </li>
+</ul>

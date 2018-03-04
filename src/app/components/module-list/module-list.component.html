@@ -1,0 +1,19 @@
+<ul [sortablejs]="modules"
+    [sortablejsOptions]="{ animation: 300 }"
+    class="list-group jga-sortable-vertical">
+  <li (click)="selectModule(module)"
+      [ngClass]="{'active': module.selected}"
+      *ngFor="let module of modules" class="list-group-item">
+    <textarea [hidden]="!module.selected"
+              rows="1"
+           [(ngModel)]="module.label"
+              class="jga-padding-0px jga-border-none jga-background-transparent"></textarea>
+    <i [hidden]="!module.selected"
+       (click)="deleteModule(module)"
+       class="float-right jga-font-size-1-point-5em fa fa-times"></i>
+    <span [hidden]="module.selected">{{module.label}}</span>
+  </li>
+  <li (click)="addModule()" class="list-group-item jga-text-align-center jga-border-left-right-none jga-border-bottom-none">
+    <i class="jga-color-red fa fa-2x fa-plus-circle"></i>
+  </li>
+</ul>

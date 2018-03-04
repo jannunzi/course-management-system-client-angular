@@ -1,0 +1,29 @@
+<ul class="nav nav-pills jga-sortable"
+    [sortablejs]="subsections"
+    [sortablejsOptions]="{ animation: 150 }">
+  <li *ngFor="let subsection of subsections"
+      ngInit="subsection.selected = false"
+      (click)="selectSubsection(subsection)"
+      class="nav-item"
+      title="Active pills can be removed and label can be edited">
+    <a class="jga nav-link"
+       [hidden]="!subsection.selected"
+       [ngClass]="{'active': subsection.selected}"
+       href="#">
+      <input class="jga-padding-0px jga-background-transparent jga-border-none"
+             [(ngModel)]="subsection.label"/>
+      &nbsp;
+      <i class="fa fa-times"></i>
+    </a>
+    <a class="jga nav-link"
+       [hidden]="subsection.selected"
+       href="#">
+      {{subsection.label}}
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">
+      <i class="jga-color-red jga-font-size-1-point-5em fa fa-plus-circle"></i>
+    </a>
+  </li>
+</ul>
